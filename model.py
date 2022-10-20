@@ -12,11 +12,11 @@ def find_number_phone(name, surname):
         return result
 # модуль для поиска Фамилии и Имени по номеру телефона
 def find_name_user(phone_number):
-    phone_number = input('введите номер телефона для поиска пользователя')
+
     with open('phone_book.txt', 'r', encoding='utf-8') as data:
         for line in data:
             string_pars = line.split(sep=',')
-            if phone_number == string_pars[2] :
+            if phone_number == string_pars[2]:
                 find_name = string_pars[0] + ' ' + string_pars[1]
                 return find_name
         result = f'пользователь c номером телефона {phone_number} в справочнике не числится'
